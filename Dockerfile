@@ -20,7 +20,7 @@ RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
 
 RUN apt-get update
 RUN apt-get -y upgrade
-RUN apt-get -y install build-essential vim git python2.7
+RUN apt-get -y install build-essential vim git python python2.7
 RUN apt-get -y install nodejs
 RUN npm install -g npm@3.x
 RUN npm install -g gulp-cli
@@ -35,6 +35,8 @@ RUN npm install --unsafe-perm
 
 RUN npm run web-build
 
+ADD signal_wrapper.py /
+
 EXPOSE 8000
 
-CMD ["npm", "run", "web-start"]
+CMD ["/signal_wrapper.py", "npm", "run", "web-start"]
