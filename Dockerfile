@@ -30,7 +30,7 @@ RUN git clone https://github.com/este/este.git
 WORKDIR este
 
 RUN npm install --unsafe-perm
-# "--unsafe--perms" are needed because commands run under root in Docker
+# "--unsafe--perm" are needed because commands run under root in Docker
 # (https://github.com/este/este/issues/445#issuecomment-147231625)
 
 RUN npm run web-build
