@@ -7,7 +7,7 @@ build:
 	docker build --tag $(TAG) .
 
 build-nc:
-	docker build --no-cache --tag $(TAG) .
+	docker build --no-cache --pull --tag $(TAG) .
 
 run:
 	docker run --rm -p 8000:8000 $(TAG)
