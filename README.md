@@ -3,7 +3,7 @@ este-docker
 
 [![Join the chat at https://gitter.im/messa/este-docker](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/messa/este-docker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-This repository contains Dockerfile that creates Docker image with node, npm and este.
+This repository contains Dockerfile that creates Docker image with node, npm and [este](https://github.com/este/este).
 
 Why?
 ----
